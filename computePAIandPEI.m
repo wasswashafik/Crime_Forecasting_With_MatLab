@@ -31,8 +31,6 @@ if showResult
     [best_PAI,best_ind] = sort(PAI_pred,'descend');
     best_PAI = best_PAI(1); best_ind = best_ind(1);
     plot(best_ind,best_PAI,'ko','MarkerSize',10), hold off
-    set(gca,'XTickLabel',floor(nRange(1)):floor(nRange(2)));
-    set(gca,'XTick',1:floor(nRange(2))-floor(nRange(1))+1);
     title('PAI')
     legend('true', 'pred')
 
@@ -43,8 +41,6 @@ if showResult
     best_PEI = best_PEI(1); best_ind = best_ind(1);
     plot(best_ind,best_PEI,'ko','MarkerSize',10), hold off
     ylim([0,1]);
-    set(gca,'XTickLabel',floor(nRange(1)):floor(nRange(2)));
-    set(gca,'XTick',1:floor(nRange(2))-floor(nRange(1))+1);
     title('PEI')
     legend('true', 'pred')
     
